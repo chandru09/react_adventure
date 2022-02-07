@@ -1,0 +1,43 @@
+.reg-form {
+  top: 45%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.reg {
+  text-align: center;
+
+  margin: 2rem;
+}
+.reg-btn {
+  width: 15%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.reg-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 143, 255) 0%,
+    rgb(12, 99, 250) 100%
+  );
+  transition: all 0.4s ease-out;
+}
+.reg-inputs {
+  width: 30%;
+  margin-bottom: 1rem;
+}
