@@ -13,6 +13,7 @@ export default function SignUp() {
             type="fname"
             name="fname"
             placeholder="Enter your first name"
+            required
           />
         </div>
         <div className="reg-inputs">
@@ -22,6 +23,7 @@ export default function SignUp() {
             type="lname"
             name="lname"
             placeholder="Enter your last name"
+            required
           />
         </div>
         <div className="reg-inputs">
@@ -33,6 +35,7 @@ export default function SignUp() {
             type="email"
             name="email"
             placeholder="Enter your email"
+            required
           />
         </div>
         <div className="reg-inputs">
@@ -44,6 +47,7 @@ export default function SignUp() {
             type="password"
             name="password"
             placeholder="Enter your password"
+            required
           />
         </div>
         <div className="reg-inputs">
@@ -55,11 +59,10 @@ export default function SignUp() {
             type="password"
             name="password"
             placeholder="Confirm your password"
+            required
           />
         </div>
-        <button className="reg-btn" type="submit">
-          Register
-        </button>
+        <button className="reg-btn">Register</button>
       </form>
     </>
   );

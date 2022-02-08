@@ -60,6 +60,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                     type="email"
                     name="email"
                     placeholder="Enter your e-mail"
+                    required
                   />
                 </div>
                 <div className="form-inputs">
@@ -71,6 +72,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                     type="password"
                     name="password"
                     placeholder="Enter your password"
+                    required
                   />
                 </div>
                 <button className="form-input-btn" type="submit">
@@ -83,7 +85,7 @@ export const Modal = ({ showModal, setShowModal }) => {
             </ModalContent>
             <CloseModalButton
               arial-label="close"
-              onClick={() => setShowModal((prev) => !prev)}
+              onClick={() => setShowModal(!showModal)}
             />
           </ModalWrapper>
         </Background>
