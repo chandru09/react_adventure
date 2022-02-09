@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 function CardItem(props) {
-  const [cartItem, setCartItem] = useState();
-
-  const addtoCart = (image, label, text) => {
+  //console.log("This add to cart item", cartItem);
+  function cartHandler(image, label, text) {
     //console.log(image, label, text);
-    setCartItem(image);
-  };
+    props.addCart(label);
+    //setCartItem(label);
+  }
 
   return (
     <>
@@ -25,7 +25,7 @@ function CardItem(props) {
             <div className="btn_align">
               <button
                 className="btn-add"
-                onClick={() => addtoCart(props.src, props.label, props.text)}
+                onClick={() => cartHandler(props.src, props.label, props.text)}
               >
                 Add
               </button>
