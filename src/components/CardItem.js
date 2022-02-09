@@ -1,6 +1,13 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 
 function CardItem(props) {
+  const [cartItem, setCartItem] = useState();
+
+  const addtoCart = (image, label, text) => {
+    //console.log(image, label, text);
+    setCartItem(image);
+  };
+
   return (
     <>
       <li className="cards__item">
@@ -16,7 +23,12 @@ function CardItem(props) {
           <div className="cards__item__info">
             <h5 className="cards__item__text">{props.text}</h5>
             <div className="btn_align">
-              <button className="btn-add">Add</button>
+              <button
+                className="btn-add"
+                onClick={() => addtoCart(props.src, props.label, props.text)}
+              >
+                Add
+              </button>
             </div>
           </div>
         </div>
