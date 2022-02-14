@@ -1,18 +1,13 @@
-import { useState } from "react";
+import React from "react";
 import "../../App.css";
-import Cards from "../Cards";
+import CardItem from "../CardItem";
 import HeroSection from "../HeroSection";
 
-function Home() {
-  let [cartItem, setCartItem] = useState("");
-  function addCart(item) {
-    setCartItem(item);
-  }
+function Home({ addCart }) {
   return (
     <>
       <HeroSection />
-      <Cards addCart={addCart} />
-      <aside>{cartItem}</aside>
+      <CardItem addCart={addCart} />
     </>
   );
 }

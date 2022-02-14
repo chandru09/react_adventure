@@ -56,12 +56,8 @@ const Navbar = ({ openModal }) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/products"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Products
+              <Link to="/cart" className="nav-links" onClick={closeMobileMenu}>
+                Cart
               </Link>
             </li>
             <li className="nav-item">

@@ -1,10 +1,11 @@
 .cards {
-  padding: 4rem;
+  padding: 3rem;
   background: #fff;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .cards__container {
@@ -22,13 +23,15 @@ h1 {
 }
 
 .cards__items {
-  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0px;
 }
 
 .cards__item {
   display: flex;
   flex: 1;
-  margin: 0 1rem;
+  margin: 0 1rem 20px 1rem;
   border-radius: 10px;
 }
 
@@ -97,6 +100,7 @@ h1 {
   color: #252e48;
   font-size: 18px;
   line-height: 24px;
+  margin: 0 0 10px 0;
 }
 .btn-add {
   padding: 8px 20px;
@@ -126,12 +130,18 @@ h1 {
 
 @media only screen and (min-width: 1024px) {
   .cards__items {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .cards__item {
     margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cards {
+    padding: 0px;
   }
 }

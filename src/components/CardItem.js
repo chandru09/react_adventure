@@ -1,39 +1,46 @@
-import React, { useState } from "react";
+import { React } from "react";
+import { cartData } from "../data/data.js";
+import "./Cards.css";
 
-function CardItem(props) {
-  //console.log("This add to cart item", cartItem);
-  function cartHandler(image, label, text) {
-    //console.log(image, label, text);
-    props.addCart(label);
-    //setCartItem(label);
-  }
+//Destination Cards component
 
+function CardItem({ addCart }) {
   return (
-    <>
-      <li className="cards__item">
-        <div className="cards__item__link">
-          {/* this props is used to get the path from Cards.js file */}
-          <figure className="cards__item__pic-wrap" data-category={props.label}>
-            <img
-              src={props.src}
-              alt="Travel Image"
-              className="cards__item__img"
-            />
-          </figure>
-          <div className="cards__item__info">
-            <h5 className="cards__item__text">{props.text}</h5>
-            <div className="btn_align">
-              <button
-                className="btn-add"
-                onClick={() => cartHandler(props.src, props.label, props.text)}
-              >
-                Add
-              </button>
-            </div>
-          </div>
-        </div>
-      </li>
-    </>
+    <div className="cards">
+      <h1 id="get">Check out these EPIC Destinations!</h1>
+      <div className="cards__container">
+        <ul className="cards__items">
+          {cartData.map((item) => (
+            <li className="cards__item">
+              <div className="cards__item__link">
+                {/* this props is used to get the path from Cards.js file */}
+                <div
+                  className="cards__item__pic-wrap"
+                  data-category={item.label}
+                >
+                  <img
+                    src={item.src}
+                    alt="Travel Image"
+                    className="cards__item__img"
+                  />
+                </div>
+                <div className="cards__item__info">
+                  <h5 className="cards__item__text">{item.text}</h5>
+                  <div className="btn_align">
+                    <button
+                      className="btn-add"
+                      onClick={() => addCart(item.src, item.label, item.text)}
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }
 
