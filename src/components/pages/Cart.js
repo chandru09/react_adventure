@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CartItems from "../CartItems";
 
 //Products added in this page

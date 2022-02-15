@@ -1,0 +1,139 @@
+.prod_container {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.icon_container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h1 {
+  margin-bottom: 1.3rem;
+  color: #f15f22;
+}
+p {
+  text-indent: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #f15f22;
+}
+/* .spot {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+} */
+.spot_card {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(black, 0.5);
+}
+
+.spot_card:hover {
+  transform: translateY(20px);
+}
+.spot_card:hover::before {
+  opacity: 1;
+}
+.spot_card:hover .spot_info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.spot_card::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+.spot_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.spot_info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+.spot_info h1 {
+  color: white;
+  margin: 0px;
+}
+.spot_info p {
+  text-align: center;
+}
+.dest_text {
+  color: black;
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+.row_btns {
+  text-align: center;
+  margin: 2rem 0;
+}
+.pdp_btns {
+  background-color: #f15f22;
+
+  padding: 9px 60px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease-out;
+}
+
+.pdp_btns a {
+  color: #fff;
+  text-decoration: none;
+}
+.pdp_btns a:hover {
+  color: black;
+}
+.ic_spot {
+  margin-top: 2rem;
+}
+.dest_cards .card-text {
+  text-indent: 0px;
+}
+.dest_cards .card-title {
+  color: #f15f22;
+}
+.dest_button {
+  float: right;
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 50%;
+  color: black;
+  margin-top: 20px;
+  background-color: #fff;
+}
+.dest_button:hover {
+  color: #fff;
+  background-color: #f15f22;
+  border: none;
+}

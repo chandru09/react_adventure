@@ -1,5 +1,6 @@
 import { React } from "react";
 import { cartData } from "../data/data.js";
+import { Link } from "react-router-dom";
 import "./Cards.css";
 
 //Destination Cards component
@@ -33,6 +34,9 @@ function CardItem({ addCart }) {
                     >
                       Add
                     </button>
+                    <Link to={item.view}>
+                      <button className="btn-add">View</button>
+                    </Link>
                   </div>
                 </div>
               </div>
