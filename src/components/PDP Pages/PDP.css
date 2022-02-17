@@ -18,6 +18,10 @@ h2 {
   margin-bottom: 2rem;
   color: #f15f22;
 }
+h4 {
+  font-family: cursive;
+  font-style: italic;
+}
 /* .spot {
   display: flex;
   width: 90%;
@@ -96,14 +100,16 @@ h2 {
 }
 .pdp_btns {
   background-color: #f15f22;
-
+  color: #fff;
   padding: 9px 60px;
   margin-right: 20px;
   border: none;
   border-radius: 20px;
   transition: all 0.3s ease-out;
 }
-
+.pdp_btns:hover {
+  color: black;
+}
 .pdp_btns a {
   color: #fff;
   text-decoration: none;
@@ -136,4 +142,7 @@ h2 {
   color: #fff;
   background-color: #f15f22;
   border: none;
+}
+.star_rating {
+  margin-top: 2rem;
 }

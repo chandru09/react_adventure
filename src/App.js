@@ -10,6 +10,8 @@ import Cart from "./components/pages/Cart";
 import SignUp from "./components/pages/SignUp";
 import { Modal } from "./components/Modal";
 import Product_1 from "./components/PDP Pages/Product_1";
+import Product_2 from "./components/PDP Pages/Product_2";
+import Product_3 from "./components/PDP Pages/Product_3";
 
 function App() {
   let [cart, setCartItem] = useState([]);
@@ -23,6 +25,7 @@ function App() {
       },
     ]);
   }
+
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal(!showModal);
@@ -34,13 +37,18 @@ function App() {
         <Navbar openModal={openModal} />
         <Modal showModal={showModal} setShowModal={setShowModal} />
         <Routes>
-          <Route path="/" element={<Home addCart={addCart} />} />
+          <Route path="/" element={<Home />} />
 
           <Route path="/services" element={<Services />} />
-          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route
+            path="/cart"
+            element={<Cart cart={cart} setCartItem={setCartItem} />}
+          />
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/product_1" element={<Product_1 />} />
         </Routes>
+        <Product_1 addCart={addCart} />
+        <Product_2 addCart={addCart} />
+        <Product_3 addCart={addCart} />
         <Footer />
       </Router>
     </>

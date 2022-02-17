@@ -123,6 +123,9 @@ h1 {
 .btn-add:hover {
   background-color: #044e86;
 }
+.list_cards__items {
+  display: block;
+}
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;

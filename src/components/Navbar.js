@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import "./Navbar.css";
 
@@ -27,6 +28,9 @@ const Navbar = ({ openModal }) => {
   }, []);
   /* Modal */
 
+  /* PopOver */
+
+  /* PopOver END */
   return (
     <>
       {/*  <Modal showModal={showModal} setShowModal={setShowModal} /> */}
@@ -60,6 +64,12 @@ const Navbar = ({ openModal }) => {
                 Cart
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="#" className="nav-links" onClick={closeMobileMenu}>
+                <AiOutlineShoppingCart size={27} />
+              </Link>
+            </li>
+
             <li className="nav-item">
               <Link
                 to="/sign-up"

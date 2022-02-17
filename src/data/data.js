@@ -1,11 +1,13 @@
 export const cartData = [
   {
+    id: 1,
     src: "https://th-thumbnailer.cdn-si-edu.com/E3krJrbWME_2D07CO1PdJDtORW4=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/f2/94/f294516b-db3d-4f7b-9a60-ca3cd5f3d9b2/fbby1h_1.jpg",
     text: "Ride through the Sahara Desert on a guided camel tour",
     label: "Adrenaline",
     view: "/product_1",
   },
   {
+    id: 2,
     src: "https://images.unsplash.com/photo-1631027761930-bc3bcfd2be74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     text: "Set Sail in the Atlantic Ocean visiting Uncharted Waters",
     label: "Mystery",

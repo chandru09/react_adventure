@@ -1,13 +1,13 @@
 import React from "react";
 import "./PDP.css";
-import { data_1 } from "../../data/similar_destination_data";
+import { data_3 } from "../../data/similar_destination_data";
 import { Link } from "react-router-dom";
 
 import { Container, Row, Col, Carousel, Card } from "react-bootstrap";
 import StarRating from "../StarRating";
-import { pdp_data } from "../../data/pdp_data";
+import { pdp_data_2 } from "../../data/pdp_data";
 
-function Product_1({ addCart }) {
+function Product_3({ addCart }) {
   return (
     <>
       <Container className="prod_container">
@@ -18,14 +18,14 @@ function Product_1({ addCart }) {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://images.unsplash.com/photo-1535191059345-c16453b851b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+                  src="https://images.unsplash.com/photo-1467830839049-11173e7b2755?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
                   alt="First Slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://images.unsplash.com/photo-1644606664837-c85c9ce45fa3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                  src="https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                   alt="Second slide"
                   height="307px"
                   width="546px"
@@ -34,7 +34,7 @@ function Product_1({ addCart }) {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://images.unsplash.com/photo-1644235279538-4cc7cbdca6a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  src="https://images.unsplash.com/photo-1599133536350-eb073a2d9477?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                   alt="Third slide"
                   height="307px"
                   width="546px"
@@ -43,7 +43,7 @@ function Product_1({ addCart }) {
             </Carousel>
           </Col>
           {/* Right Contents */}
-          {pdp_data.map((item) => (
+          {pdp_data_2.map((item) => (
             <Col lg={6} md={6} sm={12}>
               <h3>{item.label}</h3>
               <h1>{item.text}</h1>
@@ -57,10 +57,7 @@ function Product_1({ addCart }) {
                 <br /> A well-constructed content strategy will drive every
                 aspect of your customer lifecycle, building trust to convert
                 leads and transforming current customers into recurring brand
-                champions. Check out these 5 ideas below for content that can
-                capture your brand and resonate with your audience. For each
-                idea, we’ll give a live example from another adventure travel
-                company and cover its:
+                champions.
               </p>
               {/* Star Ratings */}
               <Row className="star_rating">
@@ -91,21 +88,22 @@ function Product_1({ addCart }) {
               <Row className="icon_container">
                 <Col lg={4} md={2}>
                   <img
-                    src="https://cdn-icons.flaticon.com/png/512/562/premium/562678.png?token=exp=1644856648~hmac=3d68b92b60abe02ace6111deb09d5b07"
+                    // src="https://cdn-icons.flaticon.com/png/512/562/premium/562678.png?token=exp=1644856648~hmac=3d68b92b60abe02ace6111deb09d5b07"
+                    src="https://img.icons8.com/color/344/camping-tent.png"
                     width="50px"
                     alt="Food"
                   />
                 </Col>
                 <Col lg={4} md={2}>
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/201/201426.png"
+                    src="https://img.icons8.com/color/344/fondue.png"
                     width="50px"
                     alt="Hotel"
                   />
                 </Col>
                 <Col lg={4} md={2}>
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/846/846296.png"
+                    src="https://img.icons8.com/color/344/car--v1.png"
                     width="50px"
                     alt="Travel"
                   />
@@ -117,7 +115,7 @@ function Product_1({ addCart }) {
                 <div className="spot_card">
                   <img src={item.src} alt="ic_spot" />
                   <div className="spot_info">
-                    <h1>Desert</h1>
+                    <h1>Maldives</h1>
                     <p>
                       Lorem Ipsum is simply dummy text from the printing and
                       typeseting industry
@@ -134,7 +132,7 @@ function Product_1({ addCart }) {
         <h2 className="dest_text">Similar Destinations</h2>
 
         <Row>
-          {data_1.map((item) => (
+          {data_3.map((item) => (
             <Col lg={4} md={4}>
               <Card className="dest_cards" style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={item.src} />
@@ -156,4 +154,4 @@ function Product_1({ addCart }) {
   );
 }
 
-export default Product_1;
+export default Product_3;

@@ -18,3 +18,43 @@ export const data_1 = [
     view: "/product_3",
   },
 ];
+export const data_2 = [
+  {
+    src: "https://images.unsplash.com/photo-1643981670720-eef07ebdb179?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    text: "Ride through the Sahara Desert on a guided camel tour",
+    label: "Adrenaline",
+    view: "/product_4",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1643144282726-8736271c5a95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+    text: "Travel through the Islands of Bali in a Private Cruise",
+    label: "Luxury",
+    view: "/product_5",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1628065370732-096fe7c0bfc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    text: "Ride through the Sahara Desert on a guided camel tour",
+    label: "Adrenaline",
+    view: "/product_6",
+  },
+];
+export const data_3 = [
+  {
+    src: "https://images.unsplash.com/photo-1643499725626-f239f90340cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    text: "Ride through the Sahara Desert on a guided camel tour",
+    label: "Adrenaline",
+    view: "/product_7",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1644072979360-d3a1fc6779e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    text: "Ride through the Sahara Desert on a guided camel tour",
+    label: "Adrenaline",
+    view: "/product_8",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1628677421427-f776d68e350e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+    text: "Ride through the Sahara Desert on a guided camel tour",
+    label: "Adrenaline",
+    view: "/product_9",
+  },
+];

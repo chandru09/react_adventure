@@ -44,3 +44,13 @@
   color: #fff;
   font-size: 100px;
 } */
+
+/* Star Rating css */
+
+input[type="radio"] {
+  display: none;
+}
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
