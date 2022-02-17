@@ -21,6 +21,7 @@ function Home() {
 
     setShow(x);
   }
+
   /*  let [dshow, setDShow] = useState([]);
   function sortDsec() {
     let x = cartData.sort((a, b) => (a.label > b.label ? -1 : 1));
@@ -36,11 +37,8 @@ function Home() {
           {display ? <BsFillGridFill size={30} /> : <BsListTask size={30} />}
         </div>
         <div style={{ float: "right" }} onClick={sortAsec}>
-          {show ? (
-            <AiOutlineSortAscending size={30} />
-          ) : (
-            <AiOutlineSortDescending size={30} />
-          )}
+          (
+          <AiOutlineSortAscending size={30} />)
         </div>
 
         {/*  <div style={{ float: "right" }} onClick={sortDsec}>

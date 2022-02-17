@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar openModal={openModal} />
+        <Navbar openModal={openModal} cart={cart} setCartItem={setCartItem} />
         <Modal showModal={showModal} setShowModal={setShowModal} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -45,10 +45,11 @@ function App() {
             element={<Cart cart={cart} setCartItem={setCartItem} />}
           />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/product_1" element={<Product_1 addCart={addCart} />} />
+          <Route path="/product_2" element={<Product_2 addCart={addCart} />} />
+          <Route path="/product_3" element={<Product_3 addCart={addCart} />} />
         </Routes>
-        <Product_1 addCart={addCart} />
-        <Product_2 addCart={addCart} />
-        <Product_3 addCart={addCart} />
+
         <Footer />
       </Router>
     </>

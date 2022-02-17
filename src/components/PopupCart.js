@@ -1,9 +1,9 @@
 import React from "react";
-import "./Cards.css";
+import "./PopupCart.css";
 
 //Products stored in this component
 
-function CartItems({ cart, setCartItem }) {
+function PopupCart({ cart, setCartItem }) {
   const removeBtn = (id) => {
     const arr = cart.filter((item) => item.id === id);
     setCartItem(arr);
@@ -14,17 +14,19 @@ function CartItems({ cart, setCartItem }) {
       <li className="cards__item">
         <div className="cards__item__link">
           <div
-            className="cards__item__pic-wrap"
+            className="popup_cards__item__pic-wrap"
             data-category={item.label}
             key={item.id}
           >
             <img src={item.img} className="cards__item__img" />
           </div>
-          <div className="cards__item__info">
-            <h5 className="cards__item__text">{item.text}</h5>
+          <div className="popup_cards__item__info">
+            <h5 className="popup_cards__item__text">{item.text}</h5>
           </div>
           <div>
-            <button onClick={() => removeBtn}>Remove</button>
+            <button className="popup_remove_btn" onClick={() => removeBtn}>
+              Remove
+            </button>
           </div>
         </div>
       </li>
@@ -32,8 +34,8 @@ function CartItems({ cart, setCartItem }) {
   });
   return (
     <>
-      <div className="cards__container">
-        <ul className="cards__items">
+      <div className="popup_cards__container">
+        <ul className="popup_cards__items">
           {cart.length === 0 ? <h1>Cart is Empty</h1> : cartResult}
         </ul>
       </div>
@@ -41,4 +43,4 @@ function CartItems({ cart, setCartItem }) {
   );
 }
 
-export default CartItems;
+export default PopupCart;

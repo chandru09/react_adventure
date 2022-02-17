@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Col, Row, Toast } from "react-bootstrap";
 
 import "./Navbar.css";
 
-const Navbar = ({ openModal }) => {
+import PopupCart from "./PopupCart";
+
+const Navbar = ({ openModal, cart, setCartItem }) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -29,7 +32,8 @@ const Navbar = ({ openModal }) => {
   /* Modal */
 
   /* PopOver */
-
+  const [showA, setShowA] = useState(false);
+  const toggleShowA = () => setShowA(!showA);
   /* PopOver END */
   return (
     <>
@@ -60,14 +64,23 @@ const Navbar = ({ openModal }) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/cart" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/cart"
+                className="nav-links"
+                onClick={closeMobileMenu}
+                style={{ paddingRight: "0px" }}
+              >
                 Cart
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="#" className="nav-links" onClick={closeMobileMenu}>
+              <div
+                onClick={toggleShowA}
+                className="mb-2 nav-links"
+                style={{ padding: "0px" }}
+              >
                 <AiOutlineShoppingCart size={27} />
-              </Link>
+              </div>
             </li>
 
             <li className="nav-item">
@@ -87,6 +100,19 @@ const Navbar = ({ openModal }) => {
             </Button>
           )}
         </div>
+        <Row>
+          <Col md={12} className="">
+            <Toast show={showA} onClose={toggleShowA}>
+              <Toast.Header>
+                <strong className="me-auto">Cart</strong>
+                <small></small>
+              </Toast.Header>
+              <Toast.Body>
+                <PopupCart cart={cart} setCart={setCartItem} />
+              </Toast.Body>
+            </Toast>
+          </Col>
+        </Row>
       </nav>
     </>
   );
