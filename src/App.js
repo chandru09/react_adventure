@@ -12,6 +12,7 @@ import { Modal } from "./components/Modal";
 import Product_1 from "./components/PDP Pages/Product_1";
 import Product_2 from "./components/PDP Pages/Product_2";
 import Product_3 from "./components/PDP Pages/Product_3";
+import Quiz from "./components/pages/Quiz";
 
 function App() {
   let [cart, setCartItem] = useState([]);
@@ -40,6 +41,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/services" element={<Services />} />
+          <Route path="/quiz" element={<Quiz />} />
           <Route
             path="/cart"
             element={<Cart cart={cart} setCartItem={setCartItem} />}
