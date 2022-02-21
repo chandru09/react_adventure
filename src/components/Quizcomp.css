@@ -1,10 +1,15 @@
+.quiz_container {
+  display: flex;
+  justify-content: center;
+}
+
 .app {
-  width: 100%;
+  width: 600px;
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+
   display: block;
   justify-content: space-evenly;
 }
@@ -16,6 +21,7 @@
 
 .question-count {
   margin-bottom: 20px;
+  color: #f15f22;
 }
 
 .question-count span {
@@ -37,15 +43,23 @@
   width: 100%;
   font-size: 16px;
   color: black;
-
-  display: flex;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  background-color: #08aeea;
+  display: block;
   padding: 5px;
+  margin-bottom: 10px;
   justify-content: flex-start;
   align-items: center;
-
+  border: none;
   cursor: pointer;
 }
-
+.btn_quiz:hover {
+  background-image: linear-gradient(
+    90deg,
+    rgb(39, 143, 255) 0%,
+    rgb(12, 99, 250) 100%
+  );
+}
 .btn_quiz:focus {
   outline: none;
 }
